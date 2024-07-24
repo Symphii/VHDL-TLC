@@ -1,11 +1,8 @@
-
--- Jeffrey Jiang and Dennis Chen
-
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY LogicalStep_Lab4_top IS
+ENTITY TLC_top IS
    PORT
 	(
    clkin_50	   : in	std_logic;							-- The 50 MHz FPGA Clockinput
@@ -26,9 +23,9 @@ ENTITY LogicalStep_Lab4_top IS
 	--sm_clken_temp, blink_sig_temp							: out std_logic;
 	--NS_L_temp, EW_L_temp	: out std_logic_vector(6 downto 0)
 	);
-END LogicalStep_Lab4_top;
+END TLC_top;
 
-ARCHITECTURE SimpleCircuit OF LogicalStep_Lab4_top IS
+ARCHITECTURE SimpleCircuit OF TLC_top IS
    component segment7_mux port (
           clk        	: in  	std_logic := '0';
 			 DIN2 			: in  	std_logic_vector(6 downto 0);	--bits 6 to 0 represent segments G,F,E,D,C,B,A
